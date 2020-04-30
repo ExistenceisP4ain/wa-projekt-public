@@ -1,3 +1,13 @@
+import express from 'express';
+import data from './store';
+import cors from 'cors';
+
+const app = express(); // instanciranje aplikacije
+const port = 3200; // port na kojem će web server slušati
+
+app.use(cors());
+app.use(express.json());
+
 // oglas
 app.get('/oglasi/:id', async (req, res) => {
  let id = req.params.id;
@@ -103,3 +113,5 @@ app.patch('/posts/:id', async (req, res) => {
  });
  }
 });
+
+app.listen(port, () => console.log(`Slušam na portu ${port}!`));
