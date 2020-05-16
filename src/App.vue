@@ -70,7 +70,7 @@ export default {
      firebase.auth().signOut().then(function() {
        //location.reload();
        this.$router.push({name: 'Login'})
-       location.reload();
+       //location.reload();
       console.log("Odjavljen!");
         })
     }  
