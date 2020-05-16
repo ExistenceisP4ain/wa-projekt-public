@@ -68,9 +68,9 @@ export default {
   methods: {
     logout() {
      firebase.auth().signOut().then(function() {
-       //location.reload();
-       this.$router.push({name: 'prijava'})
        location.reload();
+       this.$router.push({name: 'Login'})
+       //location.reload();
       console.log("Odjavljen!");
         })
     }  
